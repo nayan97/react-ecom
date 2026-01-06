@@ -1,15 +1,12 @@
-
+import Header from "./components/layouts/Header.jsx";
+import Footer from "./components/layouts/Footer.jsx";
 function App() {
-
-
   return (
     <>
-    <div className="bg-blue-500">
-      hello
-    </div>
-
+      <Header></Header>
+      <Footer></Footer>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
