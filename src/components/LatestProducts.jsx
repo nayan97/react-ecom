@@ -1,14 +1,12 @@
 import React from "react";
 
-
-
 const products = [
   {
     id: 1,
     name: "Maecenas quis nunc id",
     image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9",
     price: 28.72,
-    oldPrice: 35.90,
+    oldPrice: 35.9,
     rating: 0,
     badge: null,
   },
@@ -16,7 +14,7 @@ const products = [
     id: 2,
     name: "Quisque volutpat mattis",
     image: "https://images.unsplash.com/photo-1606760227091-3dd870d97f1d",
-    price: 11.90,
+    price: 11.9,
     oldPrice: null,
     rating: 5,
     badge: "New",
@@ -25,7 +23,7 @@ const products = [
     id: 3,
     name: "Volutpat mattis eros",
     image: "https://images.unsplash.com/photo-1526045478516-99145907023c",
-    price: 11.90,
+    price: 11.9,
     oldPrice: null,
     rating: 0,
     badge: null,
@@ -34,28 +32,25 @@ const products = [
     id: 4,
     name: "Donec odio the name",
     image: "https://images.unsplash.com/photo-1599643477877-530eb83abc8e",
-    price: 11.90,
+    price: 11.9,
     oldPrice: null,
     rating: 5,
     badge: "Sale",
   },
 ];
-
-const FeaturedProducts = () => {
+const LatestProducts = () => {
   return (
     <section className="py-16">
       <div className="max-w-7xl mx-auto px-4">
-        
         {/* Section Title */}
         <h2 className="text-3xl font-semibold text-center mb-12">
-          Featured Products
+          Latest Products
         </h2>
 
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.map((product) => (
             <div key={product.id} className="group">
-              
               {/* Image */}
               <div className="relative overflow-hidden bg-gray-100">
                 {product.badge && (
@@ -73,9 +68,7 @@ const FeaturedProducts = () => {
 
               {/* Info */}
               <div className="mt-4 text-center">
-                <h3 className="text-gray-700 text-sm">
-                  {product.name}
-                </h3>
+                <h3 className="text-gray-700 text-sm">{product.name}</h3>
 
                 {/* Price */}
                 <div className="mt-2">
@@ -95,9 +88,7 @@ const FeaturedProducts = () => {
                     <svg
                       key={i}
                       className={`w-4 h-4 ${
-                        i < product.rating
-                          ? "text-orange-400"
-                          : "text-gray-300"
+                        i < product.rating ? "text-orange-400" : "text-gray-300"
                       }`}
                       fill="currentColor"
                       viewBox="0 0 20 20"
@@ -115,4 +106,4 @@ const FeaturedProducts = () => {
   );
 };
 
-export default FeaturedProducts;
+export default LatestProducts;
